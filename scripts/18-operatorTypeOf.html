@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Type of</title>
+  </head>
+  <body style="background-color: lightcoral">
+    <h2>Type of</h2>
+    <script>
+      //Untuk tau tipe data di suatu variable
+
+      // Strings
+      let text = "Hello";
+      console.log(typeof text); // "string"
+
+      // Numbers
+      let num = 42;
+      console.log(typeof num); // "number"
+
+      // Booleans
+      let isTrue = true;
+      console.log(typeof isTrue); // "boolean"
+
+      // Undefined
+      let notAssigned;
+      console.log(typeof notAssigned); // "undefined"
+
+      // Null (known quirk: returns "object")
+      let emptyValue = null;
+      console.log(typeof emptyValue); // "object"
+
+      // Arrays (considered as objects)
+      let arr = [1, 2, 3];
+      console.log(typeof arr); // "object"
+
+      // Objects
+      let obj = { name: "John" };
+      console.log(typeof obj); // "object"
+
+      // Functions
+      function myFunc() {}
+      console.log(typeof myFunc); // "function"
+
+      // Symbols (ES6+)
+      let sym = Symbol("foo");
+      console.log(typeof sym); // "symbol"
+
+      //------------------------------------------application
+
+      let value = 42;
+
+      if (typeof value === "number") {
+        console.log("This is a number");
+      } else if (typeof value === "string") {
+        console.log("This is a string");
+      } else {
+        console.log("Unknown type");
+      }
+    </script>
+  </body>
+</html>

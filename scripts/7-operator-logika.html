@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator Logika</title>
+  </head>
+  <body style="background-color: lightcoral">
+    <h2>Operator Logika</h2>
+    <script>
+      const t = true;
+      const f = false;
+      //AND
+      document.writeln("<h2> AND</H2>");
+      const resultAND = t && t; // t && t = t
+      document.writeln(resultAND);
+
+      const resultAND2 = t && f; // t && f = f
+      document.writeln(resultAND2);
+
+      const resultAND3 = f && t; // f & t = f
+      document.writeln(resultAND3);
+
+      const resultAND4 = f && f; // f & f = f
+      document.writeln(resultAND4);
+
+      // OR
+      document.writeln("<h2> OR</H2>");
+      const resultOR = t || t; // t || t = t
+      document.writeln(resultOR);
+
+      const resultOR2 = t || f; // t || f = t
+      document.writeln(resultOR2);
+
+      const resultOR3 = f || t; // f || t = t
+      document.writeln(resultOR3);
+
+      const resultOR4 = f || f; // f || f = f
+
+      
+      document.writeln(resultOR4);
+    </script>
+  </body>
+</html>

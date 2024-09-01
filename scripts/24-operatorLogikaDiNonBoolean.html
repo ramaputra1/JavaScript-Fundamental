@@ -1,0 +1,40 @@
+console.log(0 && "Hello"); // Output: 0 (0 is falsy) console.log("Hello" &&
+123); // Output: 123 (both are truthy, so last value is returned)
+console.log(null && "World"); // Output: null (null is falsy)
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logika Non Boolean</title>
+  </head>
+  <body style="background-color: lightcoral">
+    <h2>Logika Non Boolean</h2>
+    <script>
+      //AND
+      console.log(0 && "Hello"); // Output: 0 (0 is falsy)
+      console.log("Hello" && 123); // Output: 123 (both are truthy, so last value is returned)
+      console.log(null && "World"); // Output: null (null is falsy)
+
+      //---------------------------------
+      //OR
+      console.log(0 || "Hello"); // Output: "Hello" (0 is falsy, so "Hello" is returned)
+      console.log("" || 123); // Output: 123 ("" is falsy, so 123 is returned)
+      console.log(false || null); // Output: null (both are falsy, so last value is returned)
+
+      //----------------------
+      //NOT
+      console.log(!"Hello"); // Output: false (because "Hello" is truthy)
+      console.log(!0); // Output: true (because 0 is falsy)
+      console.log(!undefined); // Output: true (because undefined is falsy)
+
+      //------------------------
+      let name = ""; // User didn't enter a name
+      let defaultName = "Guest";
+
+      // Using || to provide a default value
+      let displayName = name || defaultName;
+      console.log(displayName); // Output: "Guest"
+    </script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body style="background-color: lightcoral">
+    <h2>Array</h2>
+    <script>
+      //Dynamix=c, we can add some data in the array.
+
+      // 1. Create an empty array
+      let fruits = [];
+      console.log("Original empty array:", fruits);
+
+      // 2. Add items to the array using push()
+      fruits.push("Apple");
+      console.log("After push (adding Apple):", fruits);
+
+      fruits.push("Banana");
+      console.log("After push (adding Banana):", fruits);
+
+      // 3. Add items to the beginning of the array using unshift()
+      fruits.unshift("Orange");
+      console.log("After unshift (adding Orange at start):", fruits);
+
+      // 4. Remove the last item from the array using pop()
+      let removedFruit = fruits.pop();
+      console.log("After pop (removing last item):", fruits);
+      console.log("Removed fruit:", removedFruit);
+
+      // 5. Remove the first item from the array using shift()
+      let firstRemovedFruit = fruits.shift();
+      console.log("After shift (removing first item):", fruits);
+      console.log("Removed first fruit:", firstRemovedFruit);
+
+      // 6. Add multiple items using push()
+      fruits.push("Mango", "Strawberry", "Lemon");
+      console.log("After push (adding Mango, Strawberry, Lemon):", fruits);
+
+      // 7. Use splice() to add an item at a specific position
+      fruits.splice(1, 0, "Kiwi"); // Add "Kiwi" at index 1
+      console.log("After splice (adding Kiwi at index 1):", fruits);
+
+      // 8. Use splice() to remove an item at a specific position
+      let splicedFruit = fruits.splice(2, 1); // Remove the item at index 2
+      console.log("After splice (removing item at index 2):", fruits);
+      console.log("Spliced fruit:", splicedFruit);
+
+      // 9. Use indexOf() to find the index of a specific item
+      let indexOfStrawberry = fruits.indexOf("Strawberry");
+      console.log("Index of Strawberry:", indexOfStrawberry);
+
+      // 10. Use join() to combine the array elements into a string
+      let fruitString = fruits.join(", ");
+      console.log("Array as string:", fruitString);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generator Function</title>
+  </head>
+  <body style="background-color: lightcoral">
+    <h2>Generator Function</h2>
+    <script>
+      //mirip array, generator biar bisa di iterasi.
+      //untuk return data memakai "yield", jika ada 3 yield artinya ya kayak array dengan 3 data.
+      //bisa di iterasi tapi gabisa di akses by index
+
+      //basic
+      function* createNames() {
+        yield "rama";
+        yield "adi";
+        yield "putra";
+      }
+
+      const names = createNames();
+      for (const name of names) {
+        //cuma bisa di iterasi gabisa di akses BY INDEX
+        console.info(name);
+      }
+
+      //-----------------------
+      //lebih kompleks
+      //pake ini biar gausah bikin data di array (lihat for of)
+
+      function* buatGanjil(value) {
+        for (let i = 1; i <= value; i++) {
+          if (i % 2 === 1) {
+            yield i;
+          }
+        }
+      }
+
+      const numbers = buatGanjil(5);
+      for (const number of numbers) {
+        console.info(number);
+      }
+
+      //Data generator itu Lazy
+      //Selama tidak narik data, maka tidak akan di eksekusi
+
+      //Array = Eager (tidak lazy)
+      //Generator = lazy
+
+      //Contoh lazy
+
+      function* buatGanjil2(value) {
+        for (let i = 1; i <= value; i++) {
+          if (i % 2 === 1) {
+            console.info(`Yield ${i}`);
+            yield i;
+          }
+        }
+      }
+
+      const angkaGanjil = buatGanjil2(100);
+      console.info(angkaGanjil.next().value);
+      console.info(angkaGanjil.next().value);
+      console.info(angkaGanjil.next().value);
+
+      //jadi walau ada value(100) tapi di iterasi 3x doang karna pake next tadi itu.
+    </script>
+  </body>
+</html>

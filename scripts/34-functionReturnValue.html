@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Return Value</title>
+  </head>
+  <body style="background-color: lightcoral">
+    <h2>Function Return Value</h2>
+    <script>
+      //1 - basic return
+      function tambah(a, b) {
+        return a + b;
+      }
+
+      let hasil = tambah(3, 4);
+      console.log(hasil); // Output: 7
+
+      //1 - tanpa return
+      function tambah(a, b) {
+        let hasil = a + b;
+        console.log(hasil);
+      }
+
+      tambah(3, 4); // Output: 7
+
+      //2 - if return
+      function periksaAngka(angka) {
+        if (angka > 10) {
+          return "Angka lebih besar dari 10";
+        } else {
+          return "Angka 10 atau kurang";
+        }
+      }
+
+      console.log(periksaAngka(15)); // Output: Angka lebih besar dari 10
+      console.log(periksaAngka(8)); // Output: Angka 10 atau kurang
+
+      //2 - tanpa return
+      function periksaAngka(angka) {
+        if (angka > 10) {
+          console.log("Angka lebih besar dari 10");
+        } else {
+          console.log("Angka 10 atau kurang");
+        }
+      }
+
+      periksaAngka(15); // Output: Angka lebih besar dari 10
+      periksaAngka(8); // Output: Angka 10 atau kurang
+
+      //3 - objek return
+      function buatOrang(nama, umur) {
+        return {
+          nama: nama,
+          umur: umur,
+        };
+      }
+
+      let orang = buatOrang("Rama", 22);
+      console.log(orang); // Output: { nama: "Rama", umur: 22 }
+
+      // 3 - tanpa return
+
+      function buatOrang(nama, umur) {
+        let orang = {
+          nama: nama,
+          umur: umur,
+        };
+        console.log(orang);
+      }
+
+      buatOrang("Rama", 22); // Output: { nama: "Rama", umur: 22 }
+
+      //4 - return loop
+
+      function cariPertamaGenap(arr) {
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] % 2 === 0) {
+            return arr[i];
+          }
+        }
+        return null;
+      }
+
+      let angkaGenap = cariPertamaGenap([1, 3, 7, 10, 15]);
+      console.log(angkaGenap); // Output: 10
+
+      //4 - tanpa return
+
+      function cariPertamaGenap(arr) {
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] % 2 === 0) {
+            console.log(arr[i]);
+            break; // Menghentikan loop setelah menemukan angka genap pertama
+          }
+        }
+      }
+
+      cariPertamaGenap([1, 3, 7, 10, 15]); // Output: 10
+
+      //------------------------------------
+    </script>
+  </body>
+</html>

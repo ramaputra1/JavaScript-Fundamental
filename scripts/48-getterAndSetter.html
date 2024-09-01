@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>getter and setter</title>
+  </head>
+  <body style="background-color: lightcoral">
+    <h2>getter and setter</h2>
+    <script>
+      //getter: mengambil data
+      //setter: mengubah data
+      //property di Object
+      //dengan getter dan setter bisa untuk mengvalidasi atau modif2 data dalam function nya
+
+      //biasa
+      const person1 = {
+        firstName: "Rama1",
+        lastName: "Putra1",
+        fullName() {
+          return `${this.firstName} ${this.lastName}`;
+        },
+      };
+
+      console.log(person1.fullName()); //akses function (karna pake () )
+
+      //getter
+      const person2 = {
+        firstName: "Rama2",
+        lastName: "Putra2",
+        get fullName() {
+          return `${this.firstName} ${this.lastName}`;
+        },
+      };
+
+      console.log(person2.fullName); // Output: "Rama Putra"
+      //akses di situ sebagai sebuah function
+
+      //-------setter
+
+      const person = {
+        firstName: "Rama",
+        lastName: "Putra",
+
+        // Getter untuk nama lengkap
+        get fullName() {
+          return `${this.firstName} ${this.lastName}`;
+        },
+
+        // Setter untuk nama lengkap
+        set fullName(name) {
+          const parts = name.split(" ");
+          this.firstName = parts[0];
+          this.lastName = parts[1] || ""; // Menangani kasus jika nama hanya memiliki satu bagian
+        },
+      };
+
+      // Mengakses nama lengkap dengan getter
+      console.log(person.fullName); // Output: "Rama Putra"
+
+      // Mengubah nama lengkap dengan setter
+      person.fullName = "Adi Santoso";
+
+      console.log(person.firstName); // Output: "Adi" //BERUBAH JADI ADI KARNA DI SETTER
+      console.log(person.lastName); // Output: "Santoso" //BERUBAH JADI SANTOSO KARNA DI SETTER
+      console.log(person.fullName); // Output: "Adi Santoso"
+    </script>
+  </body>
+</html>

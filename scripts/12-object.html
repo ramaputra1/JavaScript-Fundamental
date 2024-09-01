@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object</title>
+  </head>
+  <body style="background-color: lightcoral">
+    <h2>Object</h2>
+    <script>
+      // 1. Create an empty object
+      let person = {};
+      console.log("Original empty object:", person);
+
+      // 2. Add properties to the object
+      person.name = "John";
+      person.age = 30;
+      console.log("After adding properties (name and age):", person);
+
+      // 3. Modify an existing property
+      person.age = 31;
+      console.log("After modifying the age:", person);
+
+      // 4. Add a new property dynamically
+      person.country = "USA";
+      console.log("After adding country property:", person);
+
+      // 5. Remove a property from the object
+      delete person.country;
+      console.log("After deleting the country property:", person);
+
+      // 6. Add multiple properties at once using Object.assign()
+      Object.assign(person, { occupation: "Engineer", city: "New York" });
+      console.log("After adding multiple properties:", person);
+
+      // 7. Check if a property exists in the object
+      console.log("Does the property 'name' exist?", "name" in person);
+
+      // 8. Loop through the object properties using a for-in loop
+      console.log("Looping through the object properties:");
+      for (let key in person) {
+        console.log(key + ": " + person[key]);
+      }
+
+      // 9. Convert the object into an array of keys and values
+      let keys = Object.keys(person);
+      let values = Object.values(person);
+      console.log("Object keys:", keys);
+      console.log("Object values:", values);
+
+      // 10. Use Object.entries() to convert the object into an array of [key, value] pairs
+      let entries = Object.entries(person);
+      console.log("Object entries as [key, value] pairs:", entries);
+
+      //---------------------------------
+
+      const person = {
+        name: "Rama",
+        age: 25,
+        occupation: "Student",
+        greet: function () {
+          return `Hello, my name is ${this.name}`;
+        },
+        incrementAge: function () {
+          this.age += 1;
+        },
+      };
+
+      console.log(person.name); // Output: "Rama"
+      console.log(person.age); // Output: 25
+      console.log(person.greet()); // Output: "Hello, my name is Rama"
+
+      // Memanggil metode untuk menambah umur
+      person.incrementAge();
+      console.log(person.age); // Output: 26
+    </script>
+  </body>
+</html>

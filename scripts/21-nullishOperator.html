@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nullish</title>
+  </head>
+  <body style="background-color: lightcoral">
+    <h2>Nullish</h2>
+    <script>
+      //syntax:
+      //let result = value ?? defaultValue;
+
+      let userName = null;
+      let defaultName = "Guest";
+
+      let displayName = userName ?? defaultName;
+      console.log(displayName); // Output: "Guest"
+    </script>
+  </body>
+</html>

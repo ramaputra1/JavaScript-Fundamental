@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructing</title>
+  </head>
+  <body style="background-color: lightcoral">
+    <h2>Destructing</h2>
+    <script>
+      //Arrange the data in array or object
+      //Help us to take the data from array or object without need to take it one by one
+
+      //Normal in array
+      const names = ["rama", "adi", "putra"];
+      const firstName = names[0];
+      const middleName = names[1];
+      const lastName = names[2];
+
+      document.writeln(firstName);
+      document.writeln(middleName);
+      document.writeln(lastName);
+
+      document.writeln("</br>");
+
+      //destruc in array
+      const names2 = ["rama2", "adi2", "putra2", "assela", "sutrisno"];
+      const [firstName2, middleName2, lastName2, ...etc] = names2;
+
+      document.writeln(firstName2);
+      document.writeln(middleName2);
+      document.writeln(lastName2);
+      document.writeln(etc);
+
+      document.writeln("</br>");
+      //normal in object
+      const person = {
+        firstName3: "rama3",
+        lastName3: "putra3",
+        address: {
+          street: "Jalan Dadali",
+          city: "Bogor",
+          country: "Indonesia",
+        },
+        hobby: "pingpong",
+      };
+
+      const firstName3 = person.firstName3;
+      document.writeln(firstName3);
+
+      document.writeln("</br>");
+      //destruc in object
+      const person2 = {
+        firstName4: "rama4",
+        lastName4: "putra4",
+        address: {
+          street: "Jalan Dadali",
+          city: "Bogor",
+          country: "Indonesia",
+        },
+        hobby: "pingpong",
+      };
+
+      //   const { firstName4, lastName4, ...others } = person2;
+      //   console.info(firstName4, lastName4, others); //normal destruc //UN-COMMENT TO SEE
+
+      const {
+        firstName4,
+        lastName4,
+        address: { city, street, country },
+        ...others
+      } = person2;
+      console.info(firstName4); //nested
+      console.info(lastName4); //nested
+      //   console.info(address); //nested //address would be error, NO MORE ADDRESS
+      console.info(city); //nested
+      console.info(street); //nested
+      console.info(others); //nested
+
+      //Normal in function parameter(1)
+      const person5 = {
+        first: "Assela",
+        last: "Sutrisno",
+      };
+
+      function displayPerson(person5) {
+        console.info(person5.first);
+        console.info(person5.last);
+      }
+
+      displayPerson(person5);
+
+      //destruc in function parameter(1)
+      const person6 = {
+        first: "Assela6",
+        last: "Sutrisno6",
+      };
+
+      function displayPerson({ first, last }) {
+        console.info(first); //notice (lebih ringkas)
+        console.info(last); //notice
+      }
+
+      displayPerson(person6);
+
+      //in function parameter(2)
+      function sum(arrayy) {
+        return arrayy[0] + arrayy[1];
+      }
+
+      console.info(sum([1, 1]));
+      console.info(sum([2, 2]));
+
+      //destruc in function parameter(2)
+      function sum2([first, second]) {
+        //notice (lebih ringkas)
+        return first + second; //notice
+      }
+
+      console.info(sum2([10, 10]));
+      console.info(sum2([20, 20]));
+
+      //destruc with default value in array  //UN-COMMENT TO SEE
+
+      //   const namesDV = ["Juang", "Astra"];
+      //   const [pertama, kedua, ketiga = "Empty"] = namesDV;
+
+      //   console.info(pertama);
+      //   console.info(kedua);
+      //   console.info(ketiga);
+
+      //destruc with default value in object
+      const namesDV = {
+        pertama: "Juang",
+        kedua: "Astra",
+      };
+
+      const { pertama, kedua, ketiga = "Empty" } = namesDV;
+      console.info(pertama);
+      console.info(kedua);
+      console.info(ketiga);
+      //dengan variable
+      const namesDV2 = {
+        pertama2: "Juang",
+        kedua2: "Astra",
+      };
+
+      const {
+        pertama2: pertama2b, //variable
+        kedua2: kedua2b, //variable
+        ketiga2 = "Empty",
+      } = namesDV2;
+      console.info(pertama2b);
+      console.info(kedua2b);
+      console.info(ketiga2);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scope</title>
+  </head>
+  <body style="background-color: lightcoral">
+    <h2>Scope</h2>
+    <script>
+      // Global variable
+      let globalVariable = "I am a global variable";
+
+      function firstFunction() {
+        // Local variable within firstFunction (Local Scope 1)
+        let localVariable1 = "I am a local variable in firstFunction";
+
+        document.writeln(`<p>${globalVariable}</p>`); // Can access globalVariable
+        document.writeln(`<p>${localVariable1}</p>`); // Can access localVariable1
+
+        function nestedFunction() {
+          // Local variable within nestedFunction (Local Scope 2)
+          let localVariable2 = "I am a local variable in nestedFunction";
+
+          document.writeln(`<p>${globalVariable}</p>`); // Can access globalVariable
+          document.writeln(`<p>${localVariable1}</p>`); // Can access localVariable1 from firstFunction
+          document.writeln(`<p>${localVariable2}</p>`); // Can access localVariable2
+        }
+
+        // Call nestedFunction to see its scope in action
+        nestedFunction();
+
+        // Trying to access localVariable2 here would result in an error
+        // because it's not in this scope.
+        // Uncommenting the next line would cause an error:
+        // document.writeln(`<p>${localVariable2}</p>`);
+      }
+
+      function secondFunction() {
+        // Local variable within secondFunction (Local Scope 3)
+        let localVariable3 = "I am a local variable in secondFunction";
+
+        document.writeln(`<p>${globalVariable}</p>`); // Can access globalVariable
+        document.writeln(`<p>${localVariable3}</p>`); // Can access localVariable3
+
+        // Trying to access localVariable1 or localVariable2 here would result in an error
+        // because they are not in this scope.
+        // Uncommenting the next lines would cause an error:
+        // document.writeln(`<p>${localVariable1}</p>`);
+        // document.writeln(`<p>${localVariable2}</p>`);
+      }
+
+      // Call firstFunction and secondFunction
+      firstFunction();
+      secondFunction();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function in Function</title>
+  </head>
+  <body style="background-color: lightcoral">
+    <h2>Function in Function</h2>
+    <script>
+      function outerFunction(outerVariable) {
+        // This is the outer function
+
+        function innerFunction(innerVariable) {
+          // This is the inner function
+          document.writeln(`<p>Outer Variable: ${outerVariable}</p>`);
+          document.writeln(`<p>Inner Variable: ${innerVariable}</p>`);
+        }
+
+        // Calling the inner function
+        innerFunction("Hello from the inner function!");
+      }
+
+      // Calling the outer function
+      outerFunction("Hello from the outer function!");
+    </script>
+  </body>
+</html>

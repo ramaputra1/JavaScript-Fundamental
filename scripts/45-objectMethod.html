@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Method</title>
+  </head>
+  <body style="background-color: lightcoral">
+    <h2>Object Method</h2>
+    <script>
+      //membuat function di properti dalam object
+
+      const person = {
+        name: "Rama",
+        sayHello: function (name) {
+          alert(`Hello ${name}`);
+        },
+      };
+
+      person.sayHello("Rama");
+
+      //---ex
+
+      const car = {
+        brand: "Toyota",
+        model: "Corolla",
+        startEngine: function () {
+          return `The ${car.brand} ${car.model} is starting.`;
+        },
+      };
+
+      console.log(car.startEngine()); // Output: "The Toyota Corolla is starting."
+    </script>
+  </body>
+</html>

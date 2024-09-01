@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator Perbandingan</title>
+  </head>
+  <body style="background-color: lightcoral">
+    <h2>Operator Perbandingan</h2>
+    <script>
+      let result = 5 == "5";
+      document.writeln("<p>" + result + "</p>"); // true because it is a 5 even tho it is in string (different type of data)
+
+      result = 5 === "5";
+      document.writeln("<p>" + result + "</p>"); //false because we use === (it is required same data type)
+
+      result = 5 > 10;
+      document.writeln("<p>" + result + "</p>"); // false because 5 is less than 10
+
+      result = 5 < 10;
+      document.writeln("<p>" + result + "</p>"); // true because 5 is more than 10
+    </script>
+  </body>
+</html>

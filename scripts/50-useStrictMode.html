@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strict Mode</title>
+  </head>
+  <body style="background-color: lightcoral">
+    <h2>Strict Mode</h2>
+    <script>
+      //tell us the error
+      //   Berikut adalah daftar hal yang dilarang di strict mode JavaScript:
+
+      //   1. Penggunaan variabel tanpa deklarasi.
+      //   2. Penulisan properti pada objek yang tidak dapat ditulis.
+      //   3. Menghapus properti yang tidak dapat dihapus.
+      //   4. Menduplikasi nama parameter dalam fungsi.
+      //   5. Penulisan ke properti tertutup (non-writable).
+      //   6. Penulisan ke `eval` atau `arguments`.
+      //   7. Menggunakan `with`.
+      //   8. Menggunakan octal literals.
+      //   9. `this` dalam fungsi tidak secara otomatis mengacu ke objek global jika dipanggil tanpa konteks.
+
+      function example() {
+        "use strict";
+        with (Math) {
+          x = cos(2);
+        }
+      } // Error: Strict mode code may not include a with statement
+    </script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Function</title>
+  </head>
+  <body style="background-color: lightcoral">
+    <h2>Arrow Function</h2>
+    <script>
+      //alternatif dari pembuatan function
+      // Limit:
+      // 1-Tidak bisa pakai argument
+      // 2-Tidak bisa pakai generator
+      // 3-Tidak bisa pakai this
+      // 4-Tidak bisa akses super
+
+      //Mirip seperti anonymus function
+
+      //1 - Normal
+      function sayHello() {
+        return "Hello!";
+      }
+
+      console.log(sayHello()); // Output: "Hello!"
+
+      //1 - Arrow Func
+      const sayHello = () => "Hello!";
+
+      console.log(sayHello()); // Output: "Hello!"
+
+      //2 - Normal (1 Parameter)
+      function greet(name) {
+        return `Hello, ${name}!`;
+      }
+
+      console.log(greet("Rama")); // Output: "Hello, Rama!"
+
+      //2 - Arrow Function
+      const greet = (name) => `Hello, ${name}!`;
+
+      console.log(greet("Rama")); // Output: "Hello, Rama!"
+
+      //3 - More than 1 Paramter Normal
+      function add(a, b) {
+        return a + b;
+      }
+
+      console.log(add(2, 3)); // Output: 5
+
+      //3 - Arrow
+      const add = (a, b) => a + b;
+
+      console.log(add(2, 3)); // Output: 5
+
+      //Pokoe lebih sitik
+    </script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Template</title>
+  </head>
+  <body style="background-color: lightcoral">
+    <h2>String Template</h2>
+    <script>
+      //parseInt
+      //parseFloat
+      // Number
+
+      //Just change the data type
+
+      const value1 = Number("1");
+      const value2 = 1;
+      const result = value1 + value2;
+
+      document.writeln(result);
+
+      // toString
+
+      document.writeln("</br>");
+      document.writeln("</br>");
+
+      const value1b = 1;
+      const value2b = 1;
+      const resultb = value1b.toString() + value2b;
+
+      document.writeln(resultb);
+
+      document.writeln("</br>");
+      document.writeln("</br>");
+      //NaN (Not a Number)
+      document.writeln("<h2> NaN</H2>");
+
+      //parseInt
+      document.writeln(`<p> ${parseInt("salah")}</p>`); //NaN
+      document.writeln(`<p> ${parseInt("1.1ups")}</p>`); //1
+
+      //parseFloat
+      document.writeln(`<p> ${parseFloat("salah")}</p>`); //NaN
+      document.writeln(`<p> ${parseFloat("1.1ups")}</p>`); //1.1
+
+      //Number (No tolerance)
+      document.writeln(`<p> ${Number("salah")}</p>`); //NaN
+      document.writeln(`<p> ${Number("1.1ups")}</p>`); //NaN
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Template</title>
+  </head>
+  <body style="background-color: lightcoral">
+    <h2>String Template</h2>
+    <script>
+      //We use $ and {} in Backtick ``
+
+      const name = "Rama";
+      const name2 = "Adi";
+      const name3 = "Putra";
+
+      const fullName = `Name: ${name} ${name2} ${name3}`; //in ` ` we use ${ variableName }
+
+      document.writeln(fullName);
+
+      //using expression
+      document.writeln("</br>");
+      document.writeln("</br>");
+
+      const nameB = "Assela";
+      const value = 95;
+
+      const result = `Name: ${nameB}, Lulus : ${value > 75}
+
+      `;
+
+      document.writeln(result);
+
+      //multiLineString
+
+      document.writeln("</br>");
+      document.writeln("</br>");
+
+      let multiLineString = `
+      Hi My name is Rama Putra
+      I am from Indonesia
+      and I love you guys
+      `;
+
+      document.writeln(multiLineString);
+    </script>
+  </body>
+</html>

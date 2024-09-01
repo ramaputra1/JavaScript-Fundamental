@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loop</title>
+  </head>
+  <body style="background-color: lightcoral">
+    <h2>Loop</h2>
+    <script>
+      let counter = 1;
+      while (true) {
+        document.writeln(`<p>Perulangan ke ${counter}</p>`);
+        counter++;
+
+        if (counter > 10) {
+          break;
+        }
+      }
+
+      //diatas: jadi sampe sebelum 10 akan berhenti (BREAK)
+
+      for (let i = 1; i <= 100; i++) {
+        if (i % 2 === 0) {
+          continue;
+        }
+        document.writeln(`<p>Perulangan ganjil ${i}</p>`);
+      }
+
+      //ketika menemui genap akan di skip dan CONTINUE ke selanjutnya perulangan
+    </script>
+  </body>
+</html>

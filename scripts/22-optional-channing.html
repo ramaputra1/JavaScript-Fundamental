@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Optional Channing</title>
+  </head>
+  <body style="background-color: lightcoral">
+    <h2>Optional Channing</h2>
+    <script>
+      let user = {
+        name: "John",
+        address: {
+          city: "New York",
+        },
+      };
+
+      // Accessing a nested property safely
+      console.log(user?.address?.city); // Output: "New York"
+      console.log(user?.address?.zipCode); // Output: undefined (instead of throwing an error)
+
+      // If user was null or undefined, it wouldn't throw an error:
+      let unknownUser = null;
+      console.log(unknownUser?.address?.city); // Output: undefined
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Function in Object</title>
+  </head>
+  <body style="background-color: lightcoral">
+    <h2>Arrow Function in Object</h2>
+    <script>
+      //jika pakai arrow function di object method nanti p
+
+      const person2 = {
+        nameB1: "Rama",
+        sayHello: (nameB2) => {
+          console.info(` Name2 ${nameB2}`);
+        },
+      }; //Name1 Rama, Name2 Budi
+      //bener karna pake this
+
+      person2.sayHello("Budi");
+
+      //ati2 kalo pake this gabisa, nanti malah masuk ke window atau undefined
+    </script>
+  </body>
+</html>

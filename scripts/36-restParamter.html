@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rest Parameter</title>
+  </head>
+  <body style="background-color: lightcoral">
+    <h2>Rest Parameter</h2>
+    <script>
+      function cetakPesan(prefix, ...pesan) {
+        let hasil = `${prefix}: ${pesan.join(", ")}`;
+        document.writeln(`<p>${hasil}</p>`);
+      }
+
+      cetakPesan("Pesan", "Hello", "world", "JavaScript");
+      // Output: "Pesan: Hello, world, JavaScript"
+
+      cetakPesan("Daftar", "Apel", "Jeruk", "Mangga");
+      // Output: "Daftar: Apel, Jeruk, Mangga"
+      //------------------------------------
+
+      //spread syntax
+      //mengambil dari array
+      const values = [10, 10, 10, 10, 10];
+
+      function sum(name, ...data) {
+        let total = 0;
+        for (const item of data) {
+          total += item;
+        }
+        document.writeln(`<p>${name} ${total}</p>`);
+      }
+
+      sum("test", ...values);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function As Value</title>
+  </head>
+  <body style="background-color: lightcoral">
+    <h2>Function As Value</h2>
+    <script>
+      function sayHello(name) {
+        document.writeln(`<p> Hello ${name}</p>`);
+      }
+
+      let say = sayHello;
+
+      sayHello("Rama1"); //same output
+      say("Rama2"); //same output
+      //prove that you can save function in variable
+
+      //------------------
+      function giveName(callback) {
+        callback("Putra");
+      }
+
+      giveName(sayHello);
+      giveName(say);
+    </script>
+  </body>
+</html>

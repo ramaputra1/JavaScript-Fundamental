@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Switch Expression</title>
+  </head>
+  <body style="background-color: lightcoral">
+    <h2>Switch Expression</h2>
+    <script>
+      //same like if expression but simplier
+
+      // 1. Switch with strings
+      let fruit = "apple";
+
+      switch (fruit) {
+        case "banana":
+          console.log("Bananas are $1 each.");
+          break;
+        case "apple":
+          console.log("Apples are $0.50 each.");
+          break;
+        case "orange":
+          console.log("Oranges are $0.75 each.");
+          break;
+        default:
+          console.log("Sorry, we don't have that fruit.");
+      }
+
+      // 2. Switch with multiple cases for weekdays and weekends
+      let day = "Saturday";
+
+      switch (day) {
+        case "Monday":
+        case "Tuesday":
+        case "Wednesday":
+        case "Thursday":
+        case "Friday":
+          console.log("It's a weekday.");
+          break;
+        case "Saturday":
+        case "Sunday":
+          console.log("It's the weekend!");
+          break;
+        default:
+          console.log("Invalid day.");
+      }
+
+      // 3. Switch with numbers (grade evaluation)
+      let grade = 85;
+
+      switch (true) {
+        case grade >= 90:
+          console.log("You got an A!");
+          break;
+        case grade >= 80:
+          console.log("You got a B!");
+          break;
+        case grade >= 70:
+          console.log("You got a C!");
+          break;
+        default:
+          console.log("You need to study more.");
+      }
+
+      //switch before the variable
+      //case for if
+      //default for else
+
+      //------------------------ WITH IF:
+
+      // 1. If-else with strings (fruit)
+      let fruit2 = "apple";
+
+      if (fruit2 === "banana") {
+        console.log("Bananas are $1 each.");
+      } else if (fruit2 === "apple") {
+        console.log("Apples are $0.50 each.");
+      } else if (fruit2 === "orange") {
+        console.log("Oranges are $0.75 each.");
+      } else {
+        console.log("Sorry, we don't have that fruit.");
+      }
+
+      // 2. If-else for weekdays and weekends (day)
+      let day2 = "Saturday";
+
+      if (
+        day2 === "Monday" ||
+        day2 === "Tuesday" ||
+        day2 === "Wednesday" ||
+        day2 === "Thursday" ||
+        day2 === "Friday"
+      ) {
+        console.log("It's a weekday.");
+      } else if (day2 === "Saturday" || day2 === "Sunday") {
+        console.log("It's the weekend!");
+      } else {
+        console.log("Invalid day.");
+      }
+
+      // 3. If-else with numbers (grade evaluation)
+      let grade2 = 85;
+
+      if (grade2 >= 90) {
+        console.log("You got an A!");
+      } else if (grade2 >= 80) {
+        console.log("You got a B!");
+      } else if (grade2 >= 70) {
+        console.log("You got a C!");
+      } else {
+        console.log("You need to study more.");
+      }
+    </script>
+  </body>
+</html>

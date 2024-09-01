@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>This</title>
+  </head>
+  <body style="background-color: lightcoral">
+    <h2>This</h2>
+    <script>
+      //This itu mengacu pada pemilik kode program tersebut
+      //Tergantung this ditulis dimana
+
+      //1- contoh: di object method, this digunakan untuk mengacu kr object pemilik function, ini milik siapa
+      //2- jika ada di global scope, bratti ya pemilik nya itu (biasanya window)
+      //3- function dengan strict mode (this adalah undefined)
+      //4- di event, this referensi ke element yang menerima event
+
+      //Paling banyak digunakan ya di object method
+
+      console.info(this); //global scope ini, this nya "window"
+      //dalam function juga window pak nanti hasilnya (pemilik nya winsoq)
+
+      //object method:
+      const person = {
+        name: "Rama",
+        sayHello: function (name2) {
+          console.info(`Name1 ${name}, Name2 ${name2}`);
+        },
+      }; //Name1 , Name2 Budi
+      //Loh ko bukan "Name1 Rama, Name2 Budi"?
+      //name itu harus di akses dulu dengan "this" itu kegunaan this, panggil sesuatu
+
+      person.sayHello("Budi");
+
+      const person2 = {
+        nameB1: "Rama",
+        sayHello: function (nameB2) {
+          console.info(`Name1 ${this.nameB1}, Name2 ${nameB2}`);
+        },
+      }; //Name1 Rama, Name2 Budi
+      //bener karna pake this
+
+      person2.sayHello("Budi");
+    </script>
+  </body>
+</html>

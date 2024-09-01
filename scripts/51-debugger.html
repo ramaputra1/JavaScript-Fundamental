@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debugger</title>
+  </head>
+  <body style="background-color: lightcoral">
+    <h2>Debugger</h2>
+    <script>
+      //Proses to find the bug (problem)
+      //fitur bawaan browser ! kalo browser ga support yoes
+      //with debugger we can stop the program at the certain position that we want (breakpoint) then see the value in that variable
+
+      //   function createFullName(firstName, middleName, lastName) {
+      //     debugger;
+      //     const fullName = `${firstName} ${lastName} ${lastName}`;
+      //     return fullName;
+      //   }
+
+      //   const name = createFullName("Rama", "Adi", "Putra");
+      //   console.info(name);
+
+      function sum(...numbers) {
+        debugger;
+        let total = 0;
+        for (const number of numbers) {
+          total += number; //harusnya +=
+        }
+        return total;
+      }
+
+      console.info(sum(1, 1, 1));
+    </script>
+  </body>
+</html>

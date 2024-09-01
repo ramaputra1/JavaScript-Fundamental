@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>In</title>
+  </head>
+  <body style="background-color: lightcoral">
+    <h2>In</h2>
+    <script>
+      // syntax: property in object
+
+      let person = {
+        name: "John",
+        age: 30,
+      };
+
+      console.log("name" in person); // true (property exists)
+      console.log("address" in person); // false (property does not exist)
+
+      //-----array
+
+      let fruits = ["apple", "banana", "orange"];
+
+      console.log(0 in fruits); // true (index 0 exists)
+      console.log(3 in fruits); // false (index 3 does not exist)
+
+      //--------property
+
+      let car = {
+        brand: "Toyota",
+        model: "Corolla",
+        year: 2020,
+      };
+
+      console.log("brand" in car); // true (property exists)
+      console.log("color" in car); // false (property does not exist)
+    </script>
+  </body>
+</html>

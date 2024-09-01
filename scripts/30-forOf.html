@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for Of</title>
+  </head>
+  <body style="background-color: lightcoral">
+    <h2>for Of</h2>
+    <script>
+      //----------for of di array
+
+      const names = ["Rama", "Adi", "Putra"];
+      for (const name of names) {
+        document.writeln(`<p>${name}</p>`);
+      }
+
+      //-----------for of di string
+      const names2 = "Rama Putra";
+      for (const character of names2) {
+        document.writeln(`<p>${character}</p>`);
+      }
+    </script>
+  </body>
+</html>

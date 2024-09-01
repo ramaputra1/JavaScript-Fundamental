@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for Loop</title>
+  </head>
+  <body style="background-color: lightcoral">
+    <h2>for Loop</h2>
+    <script>
+      //for(init statement; kondisi; post statement){ // block perulangan}
+
+      //tidak wajib diisi
+      //init di eksekusi sekali diawal
+      //kondisi true akan di eksekusi terus2 an
+      //post statement (perulangannya)
+
+      // perulangan terus menerus:
+      //   for (;;) {
+      //     alert("For Loop");
+      //   }
+
+      //bentuk 1 tanpa init dan post statement
+      let counter = 1;
+      for (; counter <= 10; ) {
+        document.writeln(`<p>Perulangan ke ${counter}</p>`);
+        counter++;
+      }
+
+      //bentuk 2 tanpa post statement
+      for (let counter = 1; counter <= 10; ) {
+        document.writeln(`<p>Perulangan ke ${counter}</p>`);
+        counter++;
+      }
+
+      //bentuk 3 dengan post statement
+      for (let counter = 1; counter <= 10; counter++) {
+        document.writeln(`<p>Perulangan ke ${counter}</p>`);
+      }
+
+      //note: selalu prepare untuk kondisinya di false kan agar berhenti.
+    </script>
+  </body>
+</html>

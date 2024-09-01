@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anonymus Function</title>
+  </head>
+  <body style="background-color: lightcoral">
+    <h2>Anonymus Function</h2>
+    <script>
+      //in Variable
+      const say = function (name) {
+        //no name of the functio there
+        document.writeln(`<p> Hello ${name}</p>`);
+      };
+
+      say("Rama");
+      say("Assela");
+
+      //in parameter
+
+      function calculate(num1, num2, operation) {
+        return operation(num1, num2);
+      }
+
+      let resultSubtract = calculate(10, 4, function (a, b) {
+        return a - b;
+      });
+      document.writeln(`<p>Result of Subtraction: ${resultSubtract}</p>`); // Output: Result of Subtraction: 6
+    </script>
+  </body>
+</html>
