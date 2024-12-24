@@ -1,1 +1,1 @@
-my old practicing
+Look how I developing my JS skills.
