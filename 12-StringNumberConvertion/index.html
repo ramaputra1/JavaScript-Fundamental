@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String & Number Convertion</title>
+  </head>
+  <body>
+    <h1>String & Number Convertion</h1>
+    <h3>Note:</h3>
+    <p>
+      <strong>Why we need this convertion?</strong>
+      Sometimes the user input gonna be string when we need its supposed to be a
+      number, or vice versa. <br />
+      That is why when the input's data type does not meet our purpose, we need
+      to convert it. <br />
+      <br />
+      Ways:
+      <br />
+      1. parseInt(string) = whole number || when you have input (11kk) it still
+      will be 11 but when you got (k11) it will be (NaN / Not a Number), so when
+      you got number <strong>in front it's fine.</strong><br />
+      2. parseFloat(string) = decimal || same like parseInt<br />
+      3. Number(string) = whole number or decimal || does not matter when you
+      got the number front or back, the value gonna be
+      <strong>always NaN</strong><br />
+      <br />
+      4. number.toString() = number to string<br />
+
+      <br /><br /><br />
+      <strong>What is NaN?</strong>
+      <br />
+      It's a unique data, when you got not a string or not a number, for
+      example: (11k), they got both number and character, It's NaN, or even
+      <strong> "kkk"</strong> they are in " " and contains no number but char,
+      so it's definetely <strong>NaN</strong> <br />
+      <strong
+        >When you try to do any operation with NaN, the output gonna be always
+        NaN</strong
+      >
+
+      <br /><br /><br />
+      That is why we got a thing to check if it's NaN or not, to prevent the
+      wrong output (to be NaN always).
+      <br />
+      the method is: <strong>isNaN(number)</strong>
+    </p>
+    <hr />
+    <h2>Output from JS goes here:</h2>
+    <script src="script.js"></script>
+  </body>
+</html>
