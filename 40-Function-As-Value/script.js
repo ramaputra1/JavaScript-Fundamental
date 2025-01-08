@@ -1,19 +1,27 @@
-// rest parameter
-function sum(name, ...data) {
-  // data is Rest Parameter
-  let total = 0;
-  for (const item of data) {
-    // cause now data is array so we can use for of
-    total += item;
-  }
-  document.writeln(`<p>Total ${name} is ${total}</p>`);
+function sayHello(name) {
+  // we have sayHello function
+  document.writeln(`<p>Hello ${name}</p>`);
 }
 
-sum("Orance", 10, 20, 30, 40, 50, 60); // after "Orance" (first argument) then the next argument would be a rest parameter till so on
-sum("Apple", 10, 20, 30, 40, 50, 60);
-sum("Banana", 10, 20, 30, 40, 50, 60);
+sayHello("Eko");
 
-// spread syntax (convert array to rest parameter)
+// store in variable:
+const say = sayHello; // now variable say is sayHello function
 
-const values = [10, 10, 10, 10, 10]; // our values is array
-sum("Test", ...values); // convert it like this
+// now we have 2 ways to call that function
+
+// 1st, use sayHello:
+sayHello("Rama");
+
+//2nd, use say variable:
+say("Rama");
+
+// then, we can use that to send as parameter
+
+function giveMeName(callback) {
+  // giveMeName need 1 parameter callback
+  callback("Rama");
+}
+
+giveMeName(sayHello); // here, we call giveMeName function and use the argument sayHello function, so we can use function as argument from callback parameter
+giveMeName(say); // same, we can use say which store sayHello function
