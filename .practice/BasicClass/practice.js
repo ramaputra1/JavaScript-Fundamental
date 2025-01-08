@@ -39,3 +39,34 @@
   const rectangle = new Rectangle(7, 2);
   console.info(rectangle.displayInfo(7, 2));
 }
+
+//
+
+var expect = function (val) {
+  const valueExpect = 5;
+  const valObj = val;
+
+  const toBeObj = {
+    value: toBe(),
+  };
+
+  const toBe = function (valObj) {
+    if (valObj === valueExpect) {
+      true;
+    } else {
+      ("Not Equal");
+    }
+    return toBeObj;
+  };
+
+  const NotToBe = function (valObj) {
+    if (valObj !== valueExpect) {
+      true;
+    } else {
+      ("Equal");
+    }
+    return toBeObj;
+  };
+
+  return;
+};
