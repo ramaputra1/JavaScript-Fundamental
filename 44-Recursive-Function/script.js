@@ -17,12 +17,3 @@ function factorialRecursive(value) {
     return value * factorialRecursive(value - 1); // here we use function
   }
 }
-
-console.info(factorialRecursive(10));
-
-factorialRecursive(5);
-// 5 * factorialRecursive(4)
-// 5 * 4 * factorialRecursive(3)
-// 5 * 4 * 3 * factorialRecursive(2)
-// 5 * 4 * 3 * 2 * factorialRecursive(1)
-// 5 * 4 * 3 * 2 * 1
