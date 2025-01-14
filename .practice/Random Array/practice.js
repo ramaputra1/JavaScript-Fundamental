@@ -43,14 +43,37 @@ If no duplicates are found, return an empty list. */
 // document.writeln(reverseArray(data));
 
 // 2
-function duplicateArray(arr) {
-  let eachData = arr.split();
-  if (eachData === eachData) {
-    return true;
-  } else {
-    return false;
-  }
+// function duplicateArray(arr) {
+//   let eachData = arr.split();
+//   if (eachData === eachData) {
+//     return true;
+//   } else {
+//     return false;
+//   }
 
-  const data = [1, 2, 3, 4, 5];
-  document.writeln(duplicateArray(data));
+//   const data = [1, 2, 3, 4, 5];
+//   document.writeln(duplicateArray(data));
+// }
+
+// array sort
+const numbers = [5, 3, 8, 4, 2];
+const sort = [];
+function sortNumbers(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (i > j) {
+        sort.push(arr[i]);
+      } else {
+        sort.push(arr[i]);
+      }
+    }
+  }
+  return sort;
 }
+
+console.log(sortNumbers(numbers));
+
+// const numbers = [5, 3, 8, 4, 2];
+// for (let i = 0; i < arr.length; i++) {
+//   console.log(i);
+// }
