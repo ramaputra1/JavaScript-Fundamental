@@ -9,11 +9,22 @@
     <h1>Prototype</h1>
     <h3>Note:</h3>
     <p>
-      We use a lot or almost everytime use it in Js, Prototype <br />
+      We use a lot or almost everytime use it in Js: Prototype <br />
       Prototype relate to Inheritance <br />
       Everytime we make a <i>constructor function</i> we always automatically
       create the prototype of it, <br />
-      To access it we use <i>__proto__</i>
+      let say we make a constructor function <i>Person</i> it will automatically
+      create <i>Person.prototype</i> <br />
+      When we make an object, automatically that object is inherit from the
+      Constructor.prototype <br />
+      To access it we use <i>__proto__</i> <br /><br /><br />
+      What is this for: <br />
+      We store some method in prototype to make it efficient and we dont store
+      it in instance object to save the memory (more efficient) <br />
+      then let say if we have <strong>same function's name</strong> in instance
+      object and the prototype, when we call that function the one that get call
+      is the one in instance object, so it's checking one by one from the parent
+      to child
     </p>
     <hr />
     <h2>Output from JS goes here:</h2>
