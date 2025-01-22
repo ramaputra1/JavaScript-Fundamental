@@ -5,5 +5,5 @@ class Person {
   }
 }
 
-const rama = new Person("Rama Putra"); // have parameter
+const rama = new Person("Rama Putra"); // have parameter by our constructor earlier
 console.info(rama);
