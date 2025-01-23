@@ -1,25 +1,20 @@
-// 'person' class
-class Person {
+// 'Class' Customer
+class Customer {
+  // this all our public variable
+  firstName;
+  lastName;
+  balance = 0;
+
+  // Constructor
   constructor(firstName, lastName) {
+    // we can access those variable here and it will stick to the instance object
     this.firstName = firstName;
     this.lastName = lastName;
   }
 
-  get fullName() {
-    return `${this.firstName} ${this.lastName}`;
-  }
-
-  set fullName(value) {
-    const result = value.split(" ");
-    this.firstName = result[0];
-    this.lastName = result[1];
-  }
+  // all methods
+  sayHello() {}
 }
 
-// all these getter and setter will stick to the prototype, not the instance object
-const rama = new Person("rama", "putra");
-console.info(rama);
-console.info(rama.fullName);
-
-rama.fullName = "Budi Nugraha";
-console.info(rama);
+const eko = new Customer("Eko", "Khannedy"); // if we let it empty, it will be undefined
+console.info(eko);
