@@ -45,7 +45,7 @@
     console.info(MathUtil.sum());
     console.info("Eko");
   } catch (error) {
-    console.info(`Terjadi error : ${error.message}`);
+    console.info(`Terjadi error : ${error.message}`); // MESSAGE is default property from Error Class
   } finally {
     console.info("Program selesai"); // this one will always be execute after even for error or no error
   }
